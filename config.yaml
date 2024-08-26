@@ -19,7 +19,7 @@ lang_tgt: vi
 
 model_folder: weights
 model_basename: base_transformer
-preload: latest
+preload: None
 
 tokenizer_file: tokenizer_{0}.json
 experiment_name: runs/base_transformer
