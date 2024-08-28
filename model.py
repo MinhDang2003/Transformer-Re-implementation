@@ -47,7 +47,7 @@ class PositionalEncoding(nn.Module):
     position_vector = torch.arange(0,seq_len,dtype = torch.float).unsqueeze(1) # (seq_len,1)
 
     #Div_term: shape (d_model)
-    div_term_vector = torch.exp(torch.arrange(0,d_model,2).float() * (-math.log(10000.0) / d_model))
+    div_term_vector = torch.exp(torch.arange(0,d_model,2).float() * (-math.log(10000.0) / d_model))
 
     #PE vector: shape(seq_len,d_model)
     pe = torch.zeros(seq_len,d_model)
