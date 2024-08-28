@@ -11,6 +11,9 @@ B1: 0.9
 B2: 0.98
 ep: 1e-9
 
+#Scheduler
+warm_up_steps: 2
+
 # Model
 seq_len: 500
 d_model: 512
