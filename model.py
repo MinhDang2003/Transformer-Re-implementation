@@ -96,7 +96,7 @@ class MultiHeadAttention(nn.Module):
 
     assert self.d_model % self.num_heads == 0
 
-    self.d_k = self.d_mode // self.num_heads # Dimension of vector seen by each head
+    self.d_k = self.d_model // self.num_heads # Dimension of vector seen by each head
     self.w_q = nn.Linear(d_model, d_model, bias=False) # Wq
     self.w_k = nn.Linear(d_model, d_model, bias=False) # Wk
     self.w_v = nn.Linear(d_model, d_model, bias=False) # Wv
