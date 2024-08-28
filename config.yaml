@@ -1,11 +1,17 @@
+# Trainning
 batch_size: 8
 num_epochs: 20
 
+# Loss
+label_smoothing: 0.1
+
+# Adam
 lr: 0.0001
 B1: 0.9
 B2: 0.98
 ep: 1e-9
 
+# Model
 seq_len: 500
 d_model: 512
 N: 6
@@ -13,10 +19,12 @@ num_heads: 8
 dropout: 0.1
 d_ff: 2048
 
+# Dataset
 datasource: Angelectronic/IWSLT15_English_Vietnamese
 lang_src: en
 lang_tgt: vi
 
+# Weights
 model_folder: weights
 model_basename: base_transformer
 preload: None
