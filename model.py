@@ -144,7 +144,7 @@ class MultiHeadAttention(nn.Module):
 
     # Final linear layer
     # (batch, seq_len, d_model) --> (batch, seq_len, d_model)
-    return self.w_o(x)
+    return self.w_output(x)
 
 class ResidualConnection(nn.Module):
     def __init__(self, features: int, dropout: float):
