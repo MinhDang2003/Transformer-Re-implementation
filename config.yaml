@@ -2,7 +2,7 @@
 #8, 32, 64
 batch_size: 64
 #5, 50 ,100
-num_epochs: 5
+num_epochs: 100
 
 # Loss
 label_smoothing: 0.1
@@ -14,7 +14,7 @@ B2: 0.98
 ep: 1e-9
 
 #Scheduler
-warm_up_steps: 2
+warm_up_steps: 50
 
 # Model
 seq_len: 500
