@@ -116,7 +116,7 @@ class MultiHeadAttention(nn.Module):
       attention_matrix = attention_matrix.masked_fill(mask ==0, -1e10)
 
     #Apply softmax - (batch, h, seq_len, seq_len)
-    attention_matrix = attention_matrix.sofmax(dim=-1)
+    attention_matrix = attention_matrix.softmax(dim=-1)
 
     if dropout is not None:
       attention_matrix = dropout(attention_matrix)
