@@ -1,6 +1,8 @@
 # Trainning
-batch_size: 8
-num_epochs: 20
+#8, 32, 64
+batch_size: 64
+#5, 50 ,100
+num_epochs: 5
 
 # Loss
 label_smoothing: 0.1
