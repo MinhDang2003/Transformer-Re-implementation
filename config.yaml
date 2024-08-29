@@ -17,7 +17,7 @@ ep: 1e-9
 warm_up_steps: 50
 
 # Model
-seq_len: 500
+seq_len: 1000
 d_model: 512
 N: 6
 num_heads: 8
