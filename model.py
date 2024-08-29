@@ -140,7 +140,7 @@ class MultiHeadAttention(nn.Module):
 
     # Combine all the heads together
     # (batch, h, seq_len, d_k) --> (batch, seq_len, h, d_k) --> (batch, seq_len, d_model)
-    x = x.transpose(1,2).contiguous().view(x.shape[0],-1,self.h * self.d_k)
+    x = x.transpose(1,2).contiguous().view(x.shape[0],-1,self.num_heads * self.d_k)
 
     # Final linear layer
     # (batch, seq_len, d_model) --> (batch, seq_len, d_model)
