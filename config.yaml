@@ -1,6 +1,6 @@
 # Trainning
 #8, 32, 64
-batch_size: 64
+batch_size: 8
 #5, 50 ,100
 num_epochs: 100
 
