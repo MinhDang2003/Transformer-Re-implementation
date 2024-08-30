@@ -25,16 +25,6 @@ class InputEmbedding(nn.Module):
     # the embeddings according to the paper
     return self.embedding_layer(x) * math.sqrt(self.d_model)
 
-seq_len = 1000
-d_model = 512
-batch = 1
-x = torch.randint(0,seq_len-1,(batch,seq_len))
-print('Dimensions of words sequences are\n\tbatchsize:', x.shape[0], '\n\tMax sequence length:', x.shape[1])
-
-layer = InputEmbedding(512,seq_len)
-x = layer(x)
-print('Dimensions of Embedding inputs are\n\tBatchsize:', x.shape[0], '\n\tMax sequence length:', x.shape[1], '\n\tDimension of embeddings:', x.shape[2])
-
 class PositionalEncoding(nn.Module):
   def __init__(self,d_model:int,seq_len:int, dropout: float):
     super(PositionalEncoding, self).__init__()
@@ -66,11 +56,7 @@ class PositionalEncoding(nn.Module):
   def forward(self, x):
     x = x + (self.pe[:,:x.shape[1],:]).requires_grad_(False) # (batch, seq_len, d_model)
     return self.dropout(x)
-
-torch.arange(0,seq_len,dtype = torch.float).shape
-
-torch.arange(0,seq_len,dtype = torch.float).unsqueeze(0).shape
-
+      
 class LayerNormalization(nn.Module):
   def __init__(self, features: int, eps:float=10**-6):
     super(LayerNormalization,self).__init__()
