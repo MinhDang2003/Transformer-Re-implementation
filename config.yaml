@@ -1,0 +1,38 @@
+# Trainning
+#8, 32, 64
+batch_size: 32
+#5, 50 ,100
+num_epochs: 50
+
+# Loss
+label_smoothing: 0.2
+
+# Adam
+lr: 0.01
+B1: 0.9
+B2: 0.98
+ep: 1e-09
+
+#Scheduler
+warm_up_steps: 10
+
+# Model
+seq_len: 50
+d_model: 128
+N: 2
+num_heads: 4
+dropout: 0.2
+d_ff: 512
+
+# Dataset
+datasource: Angelectronic/IWSLT15_English_Vietnamese
+lang_src: en
+lang_tgt: vi
+
+# Weights
+model_folder: weights
+model_basename: base_transformer
+preload: None
+
+tokenizer_file: tokenizer_{0}.json
+experiment_name: runs/base_transformer
